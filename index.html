@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <meta content="email=no" name="format-detection">
+  <title>滨湖节假日上报系统</title>
+  <link rel="icon" href="static/favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+  <script>
+    // 解决软键盘弹出问题
+    window.addEventListener('resize', function () {
+      if (
+        document.activeElement.tagName === 'INPUT' ||
+        document.activeElement.tagName === 'TEXTAREA'
+      ) {
+        window.setTimeout(function () {
+          if ('scrollIntoView' in document.activeElement) {
+            document.activeElement.scrollIntoView()
+          } else {
+            document.activeElement.scrollIntoViewIfNeeded()
+          }
+        }, 0)
+      }
+    })
+  </script>
+</head>
+
+<body>
+<div id="root"></div>
+<!-- built files will be auto injected -->
+<%=htmlWebpackPlugin.files.webpackManifest%>
+</body>
+
+</html>
